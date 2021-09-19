@@ -149,7 +149,7 @@ export default function Home() {
           margin: 0;
         }
 
-        .text div {
+        .subheading {
           max-width: 60%;
           font-size: 24px;
         }
@@ -217,6 +217,30 @@ export default function Home() {
         .icon-stack > a {
           display: inline-block;
           padding-right: 2rem;
+        }
+
+        @media only screen and (max-width: 412px) {
+          .mainDisplay {
+            height: 500px;
+            padding: 1rem;
+          }
+
+          .subheading {
+            max-width: 95%;
+          }
+
+          .features {
+            padding: 1rem;
+          }
+
+          .feature-list {
+            display: block;
+            padding: 1rem;
+          }
+
+          .feature {
+            padding: 1rem 0;
+          }
         }
       `}</style>
 

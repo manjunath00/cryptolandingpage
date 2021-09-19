@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
+import bitcoin from '../public/images/banner-image.jpg';  
 import clockSvg from "../public/clock.svg";
 import branchSvg from "../public/branch.svg";
 import tickSvg from "../public/tick.svg";
@@ -32,6 +32,9 @@ export default function Home() {
           </nav>
         </header>
         <section className="mainDisplay">
+          <div className='display-image'>
+            < Image src={bitcoin} alt='Crypto currencies'/>
+          </div>
           <div className="text">
             <h2>Mutual funds for crypto</h2>
             <div className="subheading">
@@ -128,19 +131,31 @@ export default function Home() {
         }
 
         .mainDisplay {
-          background-image: url("https://images.unsplash.com/photo-1617854611335-e54f6f1b1f42?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=executium-QQB01oqSbe8-unsplash.jpg");
           filter: contrast(80%);
           background-size: cover;
           height: 400px;
           color: var(--white);
           background-repeat: no-repeat;
           background-position: center center;
+          position: relative;
+        }
+
+        .display-image {
+          position: absolute;
+          top: 0;
+          height: 400px;
+        }
+
+        .display-image img {
+          height: 100%;
+          height: 400px;
         }
 
         .text {
           max-width: 1200px;
           margin: 0 auto;
           padding: 2rem 0;
+          z-index: 100;
         }
 
         .text h2 {

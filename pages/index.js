@@ -1,192 +1,222 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import clockSvg from "../public/clock.svg";
+import branchSvg from "../public/branch.svg";
+import tickSvg from "../public/tick.svg";
+import fb from "../public/fb.svg";
+import insta from "../public/insta.svg";
+import twitter from "../public/twitter.svg";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <title>Mutual Funds for Crypto</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <header>
+          <nav className="header">
+            <h2>CryptoMF</h2>
+            <div>
+              <a href="#features">Features</a>
+            </div>
+          </nav>
+        </header>
+        <section className="mainDisplay">
+          <div className="text">
+            <h2>Mutual funds for crypto</h2>
+            <div className="subheading">
+              We are an organisation that is taking away the hassle of investors
+              to generate wealth through cryptocurrency or digital assets using
+              the traditional instruments of Mutual-Fund, however applying the
+              new principles of the game.
+            </div>
+            <a href="google.com" target="_blank">
+              <button className="interested btn">I'm interested</button>
+            </a>
+          </div>
+        </section>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <section className="features">
+          <div className="features-heading">
+            <h3> One fund to rule them all.</h3>
+            <div>Select from a wide range of crypto mutual funds</div>
+          </div>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          <div className="feature-list">
+            <div className="feature">
+              <div>
+                <Image src={clockSvg} alt="Clock Svg" />
+              </div>
+              <div className="feature-heading">Hassle Free Investement</div>
+              <div>
+                We analyse and then channelize your funds to make your
+                investments hassle free.
+              </div>
+            </div>
+            <div>
+              <div className="feature">
+                <Image src={branchSvg} alt="Branch Svg" />
+              </div>
+              <div className="feature-heading">Diversified portfolio</div>
+              <div>
+                We invest in range of good & selected cryptocurrencies so your
+                risk minimized & returns are maximized.
+              </div>
+              Branch
+            </div>
+            <div className="feature">
+              <div>
+                <Image src={tickSvg} alt="Tick Svg" />
+              </div>
+              <div className="feature-heading">Start & Stop At anytime</div>
+              <div>
+                You can start at any time & stop at any time totally at your
+                convenience.
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
+        <div className="footer-heading">Home to Crypto Mutual Funds</div>
+        <div className="icon-stack">
+          <a href="https://www.facebook.com/" target="_blank">
+            <Image src={fb} alt="facebook" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <Image src={insta} alt="facebook" />
+          </a>
+          <a href="https://www.twitter.com/" target="_blank">
+            <Image src={twitter} alt="facebook" />
+          </a>
+        </div>
+
+        <div></div>
       </footer>
 
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
+          padding: 0;
+          margin: 0 auto;
+        }
+
+        .header {
           display: flex;
-          flex-direction: column;
-          justify-content: center;
+          padding: 1rem;
+          max-width: 1200px;
           align-items: center;
+          margin: 0 auto;
+          justify-content: space-between;
         }
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+        .header h2 {
+          font-weight: var(--bold);
+          color: var(--blue);
+          font-size: 1.5rem;
         }
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        .mainDisplay {
+          background-image: url("https://images.unsplash.com/photo-1617854611335-e54f6f1b1f42?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=executium-QQB01oqSbe8-unsplash.jpg");
+          filter: contrast(80%);
+          background-size: cover;
+          height: 400px;
+          color: var(--white);
+          background-repeat: no-repeat;
+          background-position: center center;
         }
 
-        footer img {
-          margin-left: 0.5rem;
+        .text {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 2rem 0;
         }
 
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
+        .text h2 {
+          font-weight: var(--bold);
+          padding: 1rem 0;
           margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
         }
 
-        .title,
-        .description {
+        .text div {
+          max-width: 60%;
+          font-size: 24px;
+        }
+
+        .btn {
+          border: none;
+        }
+
+        .subheading {
+          padding: 1rem 0;
+          max-width: 60%;
+          line-height: 1.3;
+        }
+
+        .interested {
+          color: var(--white);
+          background-color: var(--blue);
+          padding: 1rem 1.5rem;
+          font-weight: var(--bold);
+          font-size: 1rem;
+          border-radius: 10px;
+        }
+
+        .features {
+          margin: 0 auto;
+          padding: 2rem 0;
+          max-width: 1200px;
+        }
+
+        .features-heading {
           text-align: center;
         }
 
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
+        .features-heading h3 {
+          font-size: 36px;
+          font-weight: var(--regular);
           margin: 0 0 1rem 0;
-          font-size: 1.5rem;
         }
 
-        .card p {
-          margin: 0;
+        .feature-list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 50px;
+          padding: 2rem 0;
+        }
+
+        .feature-heading {
+          padding: 0.5rem 0 1rem 0;
+          font-weight: var(--bold);
+        }
+
+        footer {
+          display: flex;
+          font-family: inherit;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .footer-heading {
+          padding: 1rem 0;
           font-size: 1.25rem;
-          line-height: 1.5;
         }
 
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
+        .icon-stack > a {
+          display: inline-block;
+          padding-right: 2rem;
         }
       `}</style>
 
@@ -195,15 +225,30 @@ export default function Home() {
         body {
           padding: 0;
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
+          font-family: "Rubik", sans-serif;
         }
 
         * {
           box-sizing: border-box;
         }
+
+        button {
+          font-family: inherit;
+        }
+        a {
+          color: inherit;
+          font-family: inherit;
+          text-decoration: none;
+        }
+
+        :root {
+          --blue: #0052ff;
+          --white: #fff;
+          --black: #161c26;
+          --bold: 700;
+          --regular: 400;
+        }
       `}</style>
     </div>
-  )
+  );
 }

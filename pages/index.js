@@ -40,7 +40,7 @@ export default function Home() {
               the traditional instruments of Mutual-Fund, however applying the
               new principles of the game.
             </div>
-            <a href="google.com" target="_blank">
+            <a href="https://forms.gle/LcYfJNxRdYXN13xz9" target="_blank">
               <button className="interested btn">I'm interested</button>
             </a>
           </div>

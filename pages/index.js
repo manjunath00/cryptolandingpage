@@ -8,6 +8,7 @@ import fb from "../public/fb.svg";
 import insta from "../public/insta.svg";
 import twitter from "../public/twitter.svg";
 import Linkedin from "../public/linkedin.svg";
+import Logo from "../public/logo/logo.png";
 
 const url = {
   fb: "https://www.facebook.com/mutualcryptofund/",
@@ -33,6 +34,9 @@ export default function Home() {
       <main>
         <header>
           <nav className="header">
+            <div>
+              <Image src={Logo} height={50} />
+            </div>
             <h2>MutualCryptoFund</h2>
           </nav>
         </header>
@@ -40,10 +44,15 @@ export default function Home() {
           <div className="text">
             <h2>Mutual funds for crypto</h2>
             <div className="subheading">
-            We at Mutual Crypto Fund understand the volatility involved in the cryptocurrency market and hence we aim to provide a hassle-free wealth generating experience to our customers so that they can safely invest their hard-earned money while we manage the market risk to provide maximum benefits to our customers.
-            <p>
-              If you like our vision, then we invite you to give us a chance by registering with us and we will get in touch with you soon."
-            </p>
+              We at Mutual Crypto Fund understand the volatility involved in the
+              cryptocurrency market and hence we aim to provide a hassle-free
+              wealth generating experience to our customers so that they can
+              safely invest their hard-earned money while we manage the market
+              risk to provide maximum benefits to our customers.
+              <p>
+                If you like our vision, then we invite you to give us a chance
+                by registering with us and we will get in touch with you soon."
+              </p>
             </div>
             <a href="https://forms.gle/LcYfJNxRdYXN13xz9" target="_blank">
               <button className="interested btn">I'm interested</button>
@@ -126,7 +135,7 @@ export default function Home() {
           max-width: 1200px;
           align-items: center;
           margin: 0 auto;
-          justify-content: space-between;
+          justify-content: flex-start;
         }
 
         .header h2 {

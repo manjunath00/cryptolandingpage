@@ -9,6 +9,7 @@ import insta from "../public/insta.svg";
 import twitter from "../public/twitter.svg";
 import Linkedin from "../public/linkedin.svg";
 import Logo from "../public/logo/logo.png";
+import Banner from "../public/images/3banner-image.jpg";
 
 const url = {
   fb: "https://www.facebook.com/mutualcryptofund/",
@@ -41,6 +42,8 @@ export default function Home() {
           </nav>
         </header>
         <section className="mainDisplay">
+          <div className='bannerImage'>
+          </div>
           <div className="text">
             <h2>Mutual funds for crypto</h2>
             <div className="subheading">
@@ -145,14 +148,20 @@ export default function Home() {
         }
 
         .mainDisplay {
-          background-image: url("https://images.unsplash.com/photo-1617854611335-e54f6f1b1f42?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=executium-QQB01oqSbe8-unsplash.jpg");
-          // background-image: url("https://images.unsplash.com/photo-1627538993300-61f001db23e2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=executium-EM3BTKStjiA-unsplash.jpg");
-          filter: contrast(80%);
-          background-size: cover;
-          height: 475px;
-          color: var(--white);
           background-repeat: no-repeat;
           background-position: center center;
+        }
+        
+        .mainDisplay .bannerImage {
+          height: 400px;
+          background-image: url("https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?crop=entropy&cs=srgb&dl=pexels-worldspectrum-844124.jpg&fit=crop&fm=jpg&h=1183&w=1920");
+          width: 100%;
+        }
+
+        .bannerImage img  {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
         }
 
         .text {
@@ -244,8 +253,14 @@ export default function Home() {
 
         @media only screen and (max-width: 412px) {
           .mainDisplay {
-            height: 500px;
             padding: 1rem;
+          }
+
+          .mainDisplay .bannerImage {
+            object-fit: cover;
+            width: 100%;
+            height: 400px;
+            background-size: cover;
           }
 
           .subheading {

@@ -7,6 +7,14 @@ import tickSvg from "../public/tick.svg";
 import fb from "../public/fb.svg";
 import insta from "../public/insta.svg";
 import twitter from "../public/twitter.svg";
+import Linkedin from "../public/linkedin.svg";
+
+const url = {
+  fb: "https://www.facebook.com/mutualcryptofund/",
+  linkedIn: "https://www.linkedin.com/company/mutualcryptofund/",
+  insta: "https://www.instagram.com/mutualcryptofund/",
+  twitter: "https://twitter.com/LomashBidua",
+};
 
 export default function Home() {
   return (
@@ -25,20 +33,17 @@ export default function Home() {
       <main>
         <header>
           <nav className="header">
-            <h2>CryptoMF</h2>
-            <div>
-              <a href="#features">Features</a>
-            </div>
+            <h2>MutualCryptoFund</h2>
           </nav>
         </header>
         <section className="mainDisplay">
           <div className="text">
             <h2>Mutual funds for crypto</h2>
             <div className="subheading">
-              We are an organisation that is taking away the hassle of investors
-              to generate wealth through cryptocurrency or digital assets using
-              the traditional instruments of Mutual-Fund, however applying the
-              new principles of the game.
+            We at Mutual Crypto Fund understand the volatility involved in the cryptocurrency market and hence we aim to provide a hassle-free wealth generating experience to our customers so that they can safely invest their hard-earned money while we manage the market risk to provide maximum benefits to our customers.
+            <p>
+              If you like our vision, then we invite you to give us a chance by registering with us and we will get in touch with you soon."
+            </p>
             </div>
             <a href="https://forms.gle/LcYfJNxRdYXN13xz9" target="_blank">
               <button className="interested btn">I'm interested</button>
@@ -91,14 +96,17 @@ export default function Home() {
       <footer>
         <div className="footer-heading">Home to Crypto Mutual Funds</div>
         <div className="icon-stack">
-          <a href="https://www.facebook.com/" target="_blank">
-            <Image src={fb} alt="facebook" />
+          <a href={url.fb} target="_blank">
+            <Image src={fb} alt="facebook page" />
           </a>
-          <a href="https://www.instagram.com/" target="_blank">
-            <Image src={insta} alt="facebook" />
+          <a href={url.insta} target="_blank">
+            <Image src={insta} alt="Instagram page" />
           </a>
-          <a href="https://www.twitter.com/" target="_blank">
-            <Image src={twitter} alt="facebook" />
+          <a href={url.twitter} target="_blank">
+            <Image src={twitter} alt="Twitter Page" />
+          </a>
+          <a href={url.linkedIn} target="_blank">
+            <Image src={Linkedin} alt="Linkedin Page" />
           </a>
         </div>
 
@@ -114,7 +122,7 @@ export default function Home() {
 
         .header {
           display: flex;
-          padding: 1rem;
+          padding: 0.75rem 0;
           max-width: 1200px;
           align-items: center;
           margin: 0 auto;
@@ -129,9 +137,10 @@ export default function Home() {
 
         .mainDisplay {
           background-image: url("https://images.unsplash.com/photo-1617854611335-e54f6f1b1f42?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=executium-QQB01oqSbe8-unsplash.jpg");
+          // background-image: url("https://images.unsplash.com/photo-1627538993300-61f001db23e2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=executium-EM3BTKStjiA-unsplash.jpg");
           filter: contrast(80%);
           background-size: cover;
-          height: 400px;
+          height: 475px;
           color: var(--white);
           background-repeat: no-repeat;
           background-position: center center;
@@ -175,7 +184,7 @@ export default function Home() {
 
         .features {
           margin: 0 auto;
-          padding: 2rem 0;
+          padding: 2rem 0 0 0;
           max-width: 1200px;
         }
 
@@ -212,6 +221,11 @@ export default function Home() {
         .footer-heading {
           padding: 1rem 0;
           font-size: 1.25rem;
+        }
+        .icon-stack {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .icon-stack > a {
